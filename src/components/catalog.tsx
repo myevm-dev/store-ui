@@ -21,6 +21,7 @@ export default function Catalog({ title, all = false }: { title?: string; all?: 
     const key = JSON.stringify([app.chainId, category, subCategory, search]);
     const [pagination, setPagination] = useState({ key, page: 1 });
     const page = pagination.key === key ? pagination.page : 1;
+    useEffect(() => { setPagination({ key, page: 1 }); }, [key]);
     const [loaded, setLoaded] = useState<{ key: string; page: number; items: Dapp[] }>({
         key, page: 0, items: [],
     });
