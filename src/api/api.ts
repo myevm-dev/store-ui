@@ -1,10 +1,11 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { BASE_URL } from "./constants";
+import { createApi } from '@reduxjs/toolkit/query/react';
+import type { BaseQueryFn, FetchArgs, FetchBaseQueryError } from '@reduxjs/toolkit/query';
+import { queryDemo } from './demo';
 
-// React Toolkit Setup
+const localQuery: BaseQueryFn<string | FetchArgs, unknown, FetchBaseQueryError> =
+    async (args) => queryDemo(args);
+
 export const api = createApi({
-	baseQuery: fetchBaseQuery({
-		baseUrl: BASE_URL,
-	}),
-	endpoints: () => ({}),
+    baseQuery: localQuery,
+    endpoints: () => ({}),
 });

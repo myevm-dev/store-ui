@@ -1,8 +1,10 @@
 export interface PagedResponse<T> {
-	page: string;
+	page: number;
 	limit: number;
 	pageCount: number;
 	data: T[];
+	response: T[];
+	total?: number;
 }
 
 export interface PagedRequest {
@@ -13,7 +15,7 @@ export interface PagedRequest {
 export interface CategoryListResponse {
 	data: {
 		category: string;
-		subCategory: string;
+		subCategory: string[];
 	}[];
 	message: string;
 }

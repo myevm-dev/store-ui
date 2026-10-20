@@ -1,0 +1,736 @@
+[
+  {
+    "dappId": "atlas-wallet",
+    "name": "Atlas Wallet",
+    "description": "A sample wallet listing for exploring balances, networks, and account tools. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "utilities",
+    "subCategory": "wallets",
+    "displayCategory": "Wallets",
+    "tags": [
+      "Wallets",
+      "Demo"
+    ],
+    "chains": [
+      137,
+      1,
+      1101
+    ],
+    "images": {
+      "banner": "/assets/demo/atlas-wallet-banner.svg",
+      "logo": "/assets/demo/atlas-wallet.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "atlas-wallet",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "orbit-exchange",
+    "name": "Orbit Exchange",
+    "description": "Preview a token exchange interface with markets and trading tools. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "finance",
+    "subCategory": "exchanges",
+    "displayCategory": "DeFi",
+    "tags": [
+      "DeFi",
+      "Demo"
+    ],
+    "chains": [
+      137
+    ],
+    "images": {
+      "banner": "/assets/demo/orbit-exchange-banner.svg",
+      "logo": "/assets/demo/orbit-exchange.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "orbit-exchange",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "arcade-world",
+    "name": "Arcade World",
+    "description": "Discover a sample gaming hub for worlds, quests, and digital collectibles. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "games",
+    "subCategory": "adventure",
+    "displayCategory": "Gaming",
+    "tags": [
+      "Gaming",
+      "Demo"
+    ],
+    "chains": [
+      137,
+      1
+    ],
+    "images": {
+      "banner": "/assets/demo/arcade-world-banner.svg",
+      "logo": "/assets/demo/arcade-world.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "arcade-world",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "canvas-market",
+    "name": "Canvas Market",
+    "description": "A sample marketplace for browsing artwork and creator collections. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "nft",
+    "subCategory": "nft-marketplaces",
+    "displayCategory": "NFT Marketplaces",
+    "tags": [
+      "NFT Marketplaces",
+      "Demo"
+    ],
+    "chains": [
+      137,
+      1101
+    ],
+    "images": {
+      "banner": "/assets/demo/canvas-market-banner.svg",
+      "logo": "/assets/demo/canvas-market.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "canvas-market",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "relay-chat",
+    "name": "Relay Chat",
+    "description": "Explore a messaging app listing with community and conversation features. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "social-networking",
+    "subCategory": "messaging",
+    "displayCategory": "Messaging",
+    "tags": [
+      "Messaging",
+      "Demo"
+    ],
+    "chains": [
+      137,
+      1
+    ],
+    "images": {
+      "banner": "/assets/demo/relay-chat-banner.svg",
+      "logo": "/assets/demo/relay-chat.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "relay-chat",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "learn-web3",
+    "name": "Learn Web3",
+    "description": "A sample learning library with guides, lessons, and developer resources. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "education",
+    "subCategory": "",
+    "displayCategory": "Education",
+    "tags": [
+      "Education",
+      "Demo"
+    ],
+    "chains": [
+      137
+    ],
+    "images": {
+      "banner": "/assets/demo/learn-web3-banner.svg",
+      "logo": "/assets/demo/learn-web3.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "learn-web3",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "collective-dao",
+    "name": "Collective DAO",
+    "description": "Preview tools for community proposals, voting, and collaboration. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "productivity",
+    "subCategory": "decentralized-collaboration-tools",
+    "displayCategory": "DAO",
+    "tags": [
+      "DAO",
+      "Demo"
+    ],
+    "chains": [
+      137,
+      1,
+      1101
+    ],
+    "images": {
+      "banner": "/assets/demo/collective-dao-banner.svg",
+      "logo": "/assets/demo/collective-dao.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "collective-dao",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "node-cloud",
+    "name": "Node Cloud",
+    "description": "A sample developer platform for app infrastructure and network tools. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "developer-tools",
+    "subCategory": "developer-infra",
+    "displayCategory": "Infrastructure",
+    "tags": [
+      "Infrastructure",
+      "Demo"
+    ],
+    "chains": [
+      137
+    ],
+    "images": {
+      "banner": "/assets/demo/node-cloud-banner.svg",
+      "logo": "/assets/demo/node-cloud.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "node-cloud",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "open-worlds",
+    "name": "Open Worlds",
+    "description": "Explore a sample directory of shared virtual spaces and experiences. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "games",
+    "subCategory": "metaverse",
+    "displayCategory": "Metaverse",
+    "tags": [
+      "Metaverse",
+      "Demo"
+    ],
+    "chains": [
+      137,
+      1
+    ],
+    "images": {
+      "banner": "/assets/demo/open-worlds-banner.svg",
+      "logo": "/assets/demo/open-worlds.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "open-worlds",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "name-studio",
+    "name": "Name Studio",
+    "description": "A fictional business workspace for managing a team's digital identities. This is demonstration content, not a live service.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "business",
+    "subCategory": "",
+    "displayCategory": "B2B",
+    "tags": [
+      "B2B",
+      "Demo"
+    ],
+    "chains": [
+      137,
+      1101
+    ],
+    "images": {
+      "banner": "/assets/demo/name-studio-banner.svg",
+      "logo": "/assets/demo/name-studio.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "name-studio",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "pixel-collective",
+    "name": "Pixel Collective",
+    "description": "Preview a digital art project and its collection of creative assets. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "nft",
+    "subCategory": "art",
+    "displayCategory": "NFT Projects",
+    "tags": [
+      "NFT Projects",
+      "Demo"
+    ],
+    "chains": [
+      137,
+      1
+    ],
+    "images": {
+      "banner": "/assets/demo/pixel-collective-banner.svg",
+      "logo": "/assets/demo/pixel-collective.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "pixel-collective",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "domain-desk",
+    "name": "Domain Desk",
+    "description": "A sample registrar listing with domain discovery and management tools. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "nft",
+    "subCategory": "domain-names",
+    "displayCategory": "Registrars",
+    "tags": [
+      "Registrars",
+      "Demo"
+    ],
+    "chains": [
+      137
+    ],
+    "images": {
+      "banner": "/assets/demo/domain-desk-banner.svg",
+      "logo": "/assets/demo/domain-desk.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "domain-desk",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "vault-browser",
+    "name": "Vault Browser",
+    "description": "Preview a browser utility for discovering apps and organizing favorites. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "utilities",
+    "subCategory": "browsers",
+    "displayCategory": "Utilities",
+    "tags": [
+      "Utilities",
+      "Demo"
+    ],
+    "chains": [
+      137,
+      1,
+      1101
+    ],
+    "images": {
+      "banner": "/assets/demo/vault-browser-banner.svg",
+      "logo": "/assets/demo/vault-browser.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "vault-browser",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "community-radio",
+    "name": "Community Radio",
+    "description": "A sample community listening app for music and live programming. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "lifestyle",
+    "subCategory": "",
+    "displayCategory": "Others",
+    "tags": [
+      "Others",
+      "Demo"
+    ],
+    "chains": [
+      137
+    ],
+    "images": {
+      "banner": "/assets/demo/community-radio-banner.svg",
+      "logo": "/assets/demo/community-radio.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "community-radio",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "harbor-finance",
+    "name": "Harbor Finance",
+    "description": "Explore a sample finance dashboard for tracking positions and activity. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "finance",
+    "subCategory": "defi",
+    "displayCategory": "DeFi",
+    "tags": [
+      "DeFi",
+      "Demo"
+    ],
+    "chains": [
+      137,
+      1
+    ],
+    "images": {
+      "banner": "/assets/demo/harbor-finance-banner.svg",
+      "logo": "/assets/demo/harbor-finance.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "harbor-finance",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  },
+  {
+    "dappId": "nova-wallet",
+    "name": "Nova Wallet",
+    "description": "A second sample wallet listing to demonstrate filtering and pagination. This is fictional demonstration content, not a live service or verified integration.",
+    "developer": {
+      "website": ""
+    },
+    "appUrl": "",
+    "minAge": 0,
+    "isForMatureAudience": false,
+    "isSelfModerated": true,
+    "language": "en",
+    "version": "1.0.0",
+    "isListed": true,
+    "listDate": "2026-10-20",
+    "availableOnPlatform": [
+      "web"
+    ],
+    "category": "utilities",
+    "subCategory": "wallets",
+    "displayCategory": "Wallets",
+    "tags": [
+      "Wallets",
+      "Demo"
+    ],
+    "chains": [
+      137,
+      1101
+    ],
+    "images": {
+      "banner": "/assets/demo/nova-wallet-banner.svg",
+      "logo": "/assets/demo/nova-wallet.svg",
+      "screenshots": []
+    },
+    "metrics": {
+      "dappId": "nova-wallet",
+      "downloads": 0,
+      "installs": 0,
+      "uninstalls": 0,
+      "ratingsCount": 0,
+      "visits": 0,
+      "rating": 0
+    },
+    "users": [],
+    "minted": false
+  }
+]

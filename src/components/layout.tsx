@@ -1,4 +1,3 @@
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { default as NXTImage } from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -13,7 +12,7 @@ import {
 	useGetCategoryListQuery,
 	useGetFeaturedDappsQuery,
 } from "../features/dapp/dapp_api";
-import { AppStrings, allChains } from "../pages/constants";
+import { AppStrings, allChains } from "../app/strings";
 import { FeaturedCard, SliderButton } from "./card";
 import { Button, Card, DropdownButton } from "./index";
 import { Row } from "./layout/flex";
@@ -55,16 +54,12 @@ function NavBar(props) {
 			</div>
 			<div
 				className={"justify-center"}
-				data-tooltip-id="connect-wallet"
-				data-tooltip-content={AppStrings.connectWalletTooltip}
+				data-tooltip-id="preview-mode"
+				data-tooltip-content="Sample data. No wallet or API keys required."
 			>
-				<ConnectButton
-					label={"Connect Wallet"}
-					chainStatus="none"
-					showBalance={false}
-				/>
+				<Button disabled title="Wallet sign-in is disabled in this preview">UI Preview</Button>
 			</div>
-			<Tooltip id="connect-wallet" />
+			<Tooltip id="preview-mode" />
 		</Row>
 	);
 }
@@ -141,7 +136,7 @@ function ExpansionPanel(props) {
 			{open &&
 				hasSubCategories &&
 				category.subCategory.map((e) => (
-					<div
+                    <div key={e}
 						className={`pl-5 ${query?.subCategory === e
 							? " rounded-[12px] bg-[#8A46FF] pl-[16px] "
 							: ""
@@ -204,18 +199,11 @@ function CategoryList(props) {
 //TOOD: RENAME
 function Input(props) {
 	const router = useRouter();
-	const [value, setValue] = useState<string | Array<string>>(
-		router.query.search || ""
-	);
+	const [value, setValue] = useState(String(router.query.search || ""));
 
 	useEffect(() => {
-		if (value) {
-			if (router.asPath.includes(`/search?search=`))
-				router.push(`/search?search=${value}`, undefined, {
-					shallow: true,
-				});
-		}
-	}, [value]);
+        setValue(String(router.query.search || ""));
+    }, [router.query.search]);
 
 	return (
 		<div className={props.className}>
@@ -238,13 +226,15 @@ function Input(props) {
 					value={value}
 					id="searchBar"
 					onChange={(evt) => {
-						setValue(evt.currentTarget.value);
+						const search = evt.currentTarget.value;
+                        setValue(search);
+                        if (router.pathname === "/search") {
+                            router.replace({ pathname: "/search", query: { search } }, undefined, { shallow: true });
+                        }
 					}}
 					onKeyDown={(evt) => {
 						if (evt.key === "Enter") {
-							router.push(`/search?search=${value}`, undefined, {
-								shallow: true,
-							});
+							router.push({ pathname: "/search", query: { search: value } });
 						}
 					}}
 					className="w-full p-2 pl-[48px] bg-canvas-color border border-border-color rounded-lg"
@@ -274,14 +264,7 @@ export function Hero(props) {
 							<p className="w-full md:w-[70%] text-[16px] text-[#67666E] leading-[24px] font-[500] mb-[24px]">
 								{subtitle}
 							</p>
-							<Button>
-								<a
-									target={"_blank"}
-									href={"https://app.meroku.org"}
-								>
-									{button.text}
-								</a>
-							</Button>
+							<Button as="a" href="/#allDappsScroll">Explore dApps</Button>
 						</div>
 					</Row>
 				</div>
@@ -347,9 +330,9 @@ function CategoryListSmall(props) {
 									<path
 										d="M1 1L11 11M11 1L1 11"
 										stroke="#E2E1E6"
-										stroke-width="1.5"
-										stroke-linecap="round"
-										stroke-linejoin="round"
+										strokeWidth="1.5"
+										strokeLinecap="round"
+										strokeLinejoin="round"
 									/>
 								</svg>
 							) : openKey === e.category ? (
@@ -364,9 +347,9 @@ function CategoryListSmall(props) {
 									<path
 										d="M6 9.5L12 15.5L18 9.5"
 										stroke="#E2E1E6"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
+										strokeWidth="2"
+										strokeLinecap="round"
+										strokeLinejoin="round"
 									/>
 								</svg>
 							) : (
@@ -381,9 +364,9 @@ function CategoryListSmall(props) {
 									<path
 										d="M6 9.5L12 15.5L18 9.5"
 										stroke="#E2E1E6"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
+										strokeWidth="2"
+										strokeLinecap="round"
+										strokeLinejoin="round"
 									/>
 								</svg>
 							)
@@ -492,9 +475,9 @@ export function PageLayout(props) {
 										<path
 											d="M22 12.5C22 18.0228 17.5228 22.5 12 22.5M22 12.5C22 6.97715 17.5228 2.5 12 2.5M22 12.5H2M12 22.5C6.47715 22.5 2 18.0228 2 12.5M12 22.5C14.5013 19.7616 15.9228 16.208 16 12.5C15.9228 8.79203 14.5013 5.23835 12 2.5M12 22.5C9.49872 19.7616 8.07725 16.208 8 12.5C8.07725 8.79203 9.49872 5.23835 12 2.5M2 12.5C2 6.97715 6.47715 2.5 12 2.5"
 											stroke="#E2E1E6"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
+											strokeWidth="2"
+											strokeLinecap="round"
+											strokeLinejoin="round"
 										/>
 									</svg>
 									<span className="text-xl  ">
@@ -562,7 +545,7 @@ export default function Layout(props) {
 		let output = Array<React.JSX.Element>();
 		for (let i = 0; i < number; i++) {
 			output.push(
-				<div className="shimmer h-[240px] lg:h-[320px] mb-[16px] rounded-lg" />
+				<div key={i} className="shimmer h-[240px] lg:h-[320px] mb-[16px] rounded-lg" />
 			);
 		}
 		return output;
@@ -575,12 +558,12 @@ export default function Layout(props) {
 					<NavBar />
 				</div>
 				<main className="relative top-[70px]">
-					{router.asPath === "/" && (
+					{router.pathname === "/" && (
 						<section>
 							<div className="min-h-[80vh]">
 								<Hero
 									title={app.hero.title}
-									subtitle={app.hero.title}
+									subtitle={app.hero.subtitle}
 									button={app.hero.button}
 									video={app.hero.video}
 								/>
@@ -595,7 +578,7 @@ export default function Layout(props) {
 											onClick={() => {
 												(
 													slider?.current as any
-												).slickPrev();
+												)?.slickPrev();
 											}}
 										>
 											<svg
@@ -618,7 +601,7 @@ export default function Layout(props) {
 											onClick={() => {
 												(
 													slider?.current as any
-												).slickNext();
+												)?.slickNext();
 											}}
 										>
 											<svg
@@ -643,7 +626,7 @@ export default function Layout(props) {
 									{data
 										? data.map((dapp) => (
 											<Link
-												key={app.dappId}
+												key={dapp.dappId}
 												href={`/dapp?id=${dapp.dappId}`}
 												draggable={false}
 												onClick={(e) =>

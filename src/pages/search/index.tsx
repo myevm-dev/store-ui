@@ -1,11 +1,5 @@
-import ScrollToTopButton from "../../components/scroll_to_top";
-import CategoriesList from "../categories";
+import Catalog from "../../components/catalog";
 
 export default function SearchPage() {
-	return (
-		<>
-			<CategoriesList title={"Search Result"} />
-			<ScrollToTopButton />
-		</>
-	);
+    return <Catalog title="Search Result" />;
 }

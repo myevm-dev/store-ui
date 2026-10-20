@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { default as NXTImage } from "next/image";
 import { useSelector } from "react-redux";
 import { getApp } from "../features/app/app_slice";
-import { AppStrings } from "../pages/constants";
+import { AppStrings } from "../app/strings";
 import { Row } from "./layout/flex";
 
 function Text(props) {
@@ -16,10 +16,10 @@ function Text(props) {
 	return React.createElement(
 		element,
 		{
-			className: `${props.className} ${className}`,
+			className: `${props.className || props.classNames || ""} ${className}`,
 		},
 		// {dApp.description.split('\\n').map(e => <p>{e}</p>)}
-		props.children.split("\\n").map((e) => <p>{e}</p>)
+		props.children.split("\\n").map((e, index) => <span key={index}>{e}</span>)
 	);
 }
 
@@ -90,32 +90,22 @@ function ClaimButton(props) {
 }
 
 function RImage(props) {
-	const imgRef = useRef(null);
-	const [src, setSrc] = useState(
-		props.placeholder || "/assets/images/icon_placeholder.png"
-	);
-	useEffect(() => {
-		const img: any = imgRef.current;
-		// console.log(img.src, src)
-		if (img && img.src !== src) {
-			img.src = props.src;
-			// img.onerror = () => setSrc('/assets/images/icon_placeholder.png')
-			img.onload = (evt) => {
-				setSrc(props.src);
-			};
-		}
-	}, [props.src, src]);
-	return <NXTImage {...props} ref={imgRef} src={src} />;
+    const { placeholder, src, ...rest } = props;
+    const fallback = placeholder || "/assets/images/icon_placeholder.png";
+    const [failed, setFailed] = useState(false);
+    useEffect(() => { setFailed(false); }, [src]);
+    return <NXTImage {...rest} src={failed || !src ? fallback : src} onError={() => setFailed(true)} />;
 }
 
 function DropdownItem(props) {
+    const { isActive, ...elementProps } = props;
 	const itemClassName = classNames({
 		"flex flex-row gap-x-[10px] font-[500] rounded-[8px] cursor-pointer p-[8px] hover:bg-[#FFFFFF1F]":
 			true,
-		"bg-[#FFFFFF1F]": props.isActive,
+		"bg-[#FFFFFF1F]": isActive,
 	});
 	return (
-		<div className={itemClassName} {...props}>
+		<div className={itemClassName} {...elementProps}>
 			{props.children}
 		</div>
 	);
@@ -124,7 +114,7 @@ function DropdownItem(props) {
 function DropdownButton(props) {
 	const app = useSelector(getApp);
 	const [open, setOpen] = useState<boolean>(false);
-	const [title, setTitle] = useState<string>(AppStrings.allChains);
+	const title = props.items.find((item) => item.chainId === app.chainId)?.name || AppStrings.allChains;
 	return (
 		<div className="relative w-max h-max">
 			<Row
@@ -132,7 +122,7 @@ function DropdownButton(props) {
 				className="cursor-pointer items-center gap-x-[8px]"
 			>
 				<span className="text-[20px] leading-[27px] lg:text-[42px] lg:leading-[48px] font-[500]">
-					{title}
+					{app.chainId == null ? AppStrings.allChains : title}
 				</span>
 				<svg
 					width="24"
@@ -157,11 +147,6 @@ function DropdownButton(props) {
 								isActive={app.chainId === item.chainId}
 								onClick={() => {
 									item.onClick();
-									setTitle(
-										index === 0
-											? AppStrings.allChains
-											: item.name
-									);
 									setOpen(false);
 								}}
 							>
