@@ -1,4 +1,3 @@
-import { Space_Mono } from "next/font/google";
 import localFont from "next/font/local";
 
 export const generalSans = localFont({
@@ -24,8 +23,5 @@ export const generalSans = localFont({
 	variable: "--font-sans",
 });
 
-export const spaceMono = Space_Mono({
-	subsets: ["latin"],
-	weight: "400",
-	display: "swap",
-});
+// Keep tag typography local; no Google Fonts request is needed to build.
+export const spaceMono = { className: "font-mono" };

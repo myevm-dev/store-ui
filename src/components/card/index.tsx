@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { StarRating } from "../../pages/dapp";
+import { StarRating } from "../star_rating";
 import { Tag } from "../app_list";
 import { Row } from "../layout/flex";
 
@@ -42,7 +42,7 @@ export function FeaturedCard(props) {
 				</p>
 				<Row className="gap-x-[4px]">
 					{app.tags?.length ? (
-						app.tags?.slice(0, 3).map((e) => <Tag>{e}</Tag>)
+						app.tags?.slice(0, 3).map((e) => <Tag key={e}>{e}</Tag>)
 					) : (
 						<br />
 					)}

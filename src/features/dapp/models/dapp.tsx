@@ -15,6 +15,7 @@ export interface Dapp {
 	listDate: string;
 	availableOnPlatform: Array<string>;
 	category: string;
+	displayCategory?: string;
 	subCategory: string;
 	tags: Array<string>;
 	chains: Array<number>;
@@ -32,6 +33,6 @@ export interface Dapp {
 		visits: number;
 		rating: number;
 	};
-	users: [];
+	users: unknown[];
 	minted?: boolean;
 }

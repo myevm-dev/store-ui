@@ -1,84 +1,50 @@
-# Meroku Dapp store Reference Implementation
+# Slick Store UI preview
 
-This project was bootstrapped with [Next.js](https://nextjs.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+This standalone version preserves the purple Slick Store design from `myevm-dev/store-ui`: its hero, featured carousel, expandable categories, chain selector, app details, search, browsing history, and infinite scrolling.
 
----
+## Run locally or in Codespaces
 
-## Authors
+Use Node.js 22 and npm.
 
--   Akshit Ostwal [Github](https://github.com/AkshitOstwal) [Twitter](https://twitter.com/Akshitostwal)
--   Abhimanyu Shekhawat [Github](https://github.com/abhimanyu121) [Twitter](https://twitter.com/sokkkkaaa)
--   Rohan Thacker [Github](https://github.com/rohanthacker)
+```bash
+npm ci
+npm run dev
+```
 
-## Available Scripts
+Open http://localhost:3000, or open port 3000 in the Codespaces Ports tab. No `.env` file, API host, API keys, wallet project ID, or authentication secrets are required.
 
-In the project directory, you can run:
+If npm previously stopped with `ENOTEMPTY`, stop the dev server and any other npm install, then reinstall generated dependencies:
 
-### `npm dev`
+```bash
+rm -rf node_modules
+npm ci
+npm run dev
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Keep `package-lock.json`. It pins the tested dependencies.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Preview behavior
 
-### `npm run build`
+- Sixteen fictional sample apps and their artwork are bundled locally.
+- Search, category/subcategory filters, All Chains/Ethereum/Polygon/zkEVM filters, featured listings, infinite scrolling, and detail pages use the local catalog.
+- Browsing history is saved only in this browser's local storage.
+- Wallet connection, sign-in, review submissions, downloads, claiming, and app updates are disabled or removed. No transactions or submissions are made.
+- Sample apps have no live destinations or invented review scores.
+- The share link uses the current browser URL, including Codespaces URLs.
+- Fonts and sample artwork are local. Browsing the catalog does not need a backend.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Edit `src/data/demo-apps.json` to change the sample catalog. The local query transport is in `src/api/demo.js`.
 
----
+## Checks and production preview
 
-### Config
+```bash
+npm test
+npm run typecheck
+npm run lint
+npm run build
+npm start
+```
 
-App secrets can be adjusted via the .env file [Read More](https://nextjs.org/docs/pages/building-your-application/configuring/environment-variables) about customising
-.env files on Next.js official docs
+GitHub Actions runs a clean install and these checks on pull requests. Next.js writes its production output to `build/`.
 
-Next.js can be configured using next.config.js [Read More](https://nextjs.org/docs/pages/api-reference/next-config-js)
-
----
-
-### File Structure
-
--   /src/api/api => Redux Query Setup
--   /src/api/constants => API Constant Values
-
--   /src/app/constants => Application constants such as Site title, Menu etc
-
--   /src/components => UI Components
-
--   /src/features => Application Features
--   /src/features/dapp => Integration with the dApp registry
-
--   /src/models => Generic Global models
-
--   /src/pages => Public Pages following the Next.js convention [Read More](https://nextjs.org/docs/getting-started/project-structure#pages-routing-conventions)
-
--   /src/store => Redux Store Setup and Middleware Setup
--   /src/store/hooks => Typed Hooks for usage within the Application
-
--   /src/theme => Application theme public export, export all theme variable from this file
--   /src/theme/fonts => Application fonts using Next/font
-
--   /public => Public files and Static Assets
-
-### Styling
-
-[Tailwind CSS](https://tailwindcss.com/docs/installation) is used to style individual elements
-
-The global config file is `tailwind.config.js`
-
-### Helpful Links
-
--   [React](https://react.dev/)
--   [Typescript](https://www.typescriptlang.org/)
--   [Redux](https://redux.js.org/)
--   [Redux Toolkit](https://redux-toolkit.js.org/)
--   [TailwindCSS](https://tailwindcss.com)
-
-### Adding new API endpoints
-
-While adding new API endpoints it is important to call `api.injectEndpoints` and register the builder function with
-Redux Toolkit an example of this can be seen in `src/features/dapp/dapp_api.ts`
-
-To know more about this [visit](https://redux-toolkit.js.org/rtk-query/usage/code-splitting)
+Original Slick Store layout and assets are retained from this repository. This branch is a UI demonstration, without live marketplace services.

@@ -51,9 +51,9 @@ const posConfig: AppConfig = {
 	hero: {
 		title: "There are more dApps built #OnPolygon than ever before",
 		subtitle:
-			"The dApps in our ecosystem set the standard for privacy,security and content quality.",
+			"Explore the Slick Store UI with fictional sample apps. No account, wallet, or API key required.",
 		button: {
-			text: "Submit your dApp",
+			text: "Explore dApps",
 			href: "",
 		},
 		video: "https://player.vimeo.com/video/791153898?h=da72488da5",

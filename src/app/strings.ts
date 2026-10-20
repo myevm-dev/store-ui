@@ -50,5 +50,3 @@ const allChains: {
 ];
 
 export { AppStrings, allChains };
-const defaultExport = () => {};
-export default defaultExport;

@@ -3,19 +3,14 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getApp } from "../../features/app/app_slice";
 import { Dapp } from "../../features/dapp/models/dapp";
-import { AppStrings } from "../constants";
+import { AppStrings } from "../../app/strings";
+import { readHistory } from "../../lib/history";
 
 export default function HistoryPage(props) {
     const app = useSelector(getApp);
-    const [history, setHistory] = useState({});
+    const [history, setHistory] = useState<Dapp[]>([]);
 
-    useEffect(() => {
-        let text = localStorage.getItem("dApps");
-        if (text) {
-            setHistory(JSON.parse(text));
-        }
-        console.log(history);
-    }, []);
+    useEffect(() => { setHistory(readHistory()); }, []);
     return (
         <PageLayout>
             <h1 className="text-4xl mb-8 capitalize">
@@ -27,14 +22,7 @@ export default function HistoryPage(props) {
                 </h2>
             )}
             <AppList
-                data={(Object.values(history) as Array<Dapp>)
-                    .filter(
-                        (dapp) =>
-                            (dapp.chains as Array<number>).indexOf(
-                                app.chainId
-                            ) !== -1
-                    )
-                    .reverse()}
+                data={history.filter((dapp) => app.chainId == null || dapp.chains.includes(app.chainId))}
             />
         </PageLayout>
     );

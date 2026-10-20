@@ -26,7 +26,7 @@ export function AppList(props) {
 		<div className="grid gap-8 grid-cols-1 md:grid-cols-2 3xl:grid-cols-3">
 			{props.data.length ? (
 				props.data.map((app: Dapp) => (
-					<Link href={`/dapp?id=${app.dappId}`}>
+					<Link key={app.dappId} href={`/dapp?id=${app.dappId}`}>
 						{" "}
 						<Card key={app.dappId}>
 							{/* <Link href={}> */}
@@ -40,7 +40,7 @@ export function AppList(props) {
 								/>
 								<Row className="items-start gap-[6px]">
 									{app.tags?.slice(0, 3).map((e) => (
-										<Tag>{e}</Tag>
+										<Tag key={e}>{e}</Tag>
 									))}
 								</Row>
 							</Row>
